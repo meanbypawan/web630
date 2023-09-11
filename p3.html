@@ -1,0 +1,62 @@
+<html>
+    <head>
+    <!--
+        Client Application  
+          I have some data (email,password)
+
+        
+        Backend Server
+        ---------------------------------
+                            request (It is object)
+        www.facebook.com------------------------------------ Facebook Server
+                                       response
+        Browser / client application<-----------------------
+
+        1. Request (GET, POST)
+            a. Query parameter
+            b. Request body
+            c. Request Headers
+        ---------------------------    
+       
+        GET :-
+         1. It is used to get the data from the server
+         2. Data can be send by using get request but it will be exposed
+            in url and data will be send in query parameter
+         3. Less Secure
+         4. Will not work in case file
+         5. Not suidatable/not work in case large amount of data
+        POST :-
+        1. It is used to send data to the server
+        2. In case of post data will not be exposed in url beacasuse
+           data will sent into the request body.  
+        3. Secure
+        4. post is recommended in case of file
+        5. It is recommended for sending large amount of data.
+      -->
+    </head>
+    <body>
+      <form method="GET">  
+       <div>
+          <label>Email : </label><br>
+          <input type="email" name="userEmail" value="test@gmail.com"/>
+       </div> 
+       <div>
+        <label>Password : </label><br>
+        <input type="password" name="userPassword" value="12345"/>
+       </div>
+       <br>
+       <div>
+        <label>Username</label><br>
+        <input type="text" value="Test"/>
+       </div>
+       <br>
+       <div>
+        <label>Age</label><br>
+        <input type="number" min="18" max="99" value="101"/>
+       </div>
+       <div>
+          <input type="submit" value="Sign up"/>
+       </div> 
+     </form>
+    </body>
+</html>

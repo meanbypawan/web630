@@ -1,0 +1,61 @@
+Web development:-
+  Web Application
+   a. Front end
+   b. Backend 
+   c. Database/Storage
+
+   --------------------------
+   Website (Collection web pages)
+    a. static website
+       HTML, CSS,BootStrap, JS (Front end)
+
+    b. Dynamic website
+    ------------------------
+    Front-end(HTML,CSS, Bootstrap) ----> Front end developer
+
+        Backend Implementation/ServerSide Code --------> Backend Developer
+        (Java, python, asp, ruby, php, javascript....)
+
+    Database / Storage ----> Database developer
+    MySQL, Oracel, Postgress, MongoDB, MariDB, SQLite...   
+   -----------------------------------------------
+    FullStack Developer
+   ------------------------------------------------
+   Web - Application
+     a. Multipage application
+     b. Single page application 
+         i. ReactJS  ---------------> Reacti-Native (Hybrid Mobile Appl)
+         ii. Angular --------------->ionic
+
+  -------------------------------------------------------------
+  HTML :-
+   HyperText Markup Language
+   It is language of web
+    a. Web 1.0 --> Static
+    b. Web 2.0 --> Dynamic Site
+    c. Web 3.0 --> Blockchain
+  HTML 1.0--2-->3 ---> 4 --->5
+  
+  HTML 4
+  HTML 5 (100+ Tag (140))
+  ----------------------------------------------------------------
+  Tag <div>
+  HTML Tag
+  HTML Element
+    starttag + Content + closing Tag = HTML Element
+    <div> fdsklfdfjdljff</div>
+ -----------------------------------------------------------------
+  Tag
+   paired
+   unpaired/self closing tag  
+
+
+
+
+
+
+
+
+
+
+
