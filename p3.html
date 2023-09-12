@@ -47,13 +47,41 @@
        <br>
        <div>
         <label>Username</label><br>
-        <input type="text" value="Test"/>
+        <input type="text" name="username" value="Test"/>
        </div>
        <br>
        <div>
         <label>Age</label><br>
-        <input type="number" min="18" max="99" value="101"/>
+        <input type="number" name="userAge" min="18" max="99" value="101"/>
        </div>
+       <p>
+         <lable>Qualification</lable><br>
+         <select name="qualification">
+            <option value="1">Doctorate</option>
+            <option value="2">Post gradudate</option>
+            <option value="3">Graduate</option>
+            <option value="4">Under graduate</option>
+         </select>
+       </p>
+       <p>
+         Male <input type="radio" name="gender" value="M"/>
+         Female <input type="radio" name="gender" value="F"/>
+       </p>
+       <p>
+         <label>Skills</label><br><br>
+         Java <input type="checkbox" name="chk1" value="Java"/>
+         Angular <input type="checkbox" name="chk2" value="Angular"/>
+         RactJs <input type="checkbox" name="chk3" value="React"/>
+         Android <input type="checkbox" name="chk4" value="Android"/>
+       </p>
+       <!-- <p>
+         <lable>Profile pic</lable><br><br>
+         <input type="file"/>
+       </p> -->
+       <p>
+         <lable>Your favorite color</lable><br><br>
+         <input type="color" name="color"/>
+       </p>
        <div>
           <input type="submit" value="Sign up"/>
        </div> 
