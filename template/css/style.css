@@ -155,14 +155,85 @@ nav{
     width: 20%;
     background-color: #FFD333;
     margin-left: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    position: relative;
 }
 .navigation-menu{
     height: 100%;
     width: 50%;
     border:1px solid blue;
+    position: relative;
 }
 .wishlist-and-cart{
     width: 30%;
     height: 100%;
     border: 5px solid green;
+}
+.category-list i{
+    font-size: 15px;
+}
+.category-list span:nth-child(2){
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 500 !important;
+}
+.category-list span:nth-child(3){
+  font-size: 20px;
+  margin-left: 50px;
+  font-weight: 500 !important;
+}
+
+.category-list ul{
+    background-color: transparent;
+    width: 100% !important;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    display: none;
+}
+.category-list ul li{
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+.category-list h1:hover + ul{
+    display: block;
+}
+
+.navigation-menu ul:nth-child(1){
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    column-gap: 20px;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+.navigation-menu ul li ul{
+    background-color: #FFD333;
+    display: none !important;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding-left: 0px !important;
+    height: 120px !important;
+    
+}
+.navigation-menu ul li:hover ul{
+    display: block !important;
+}
+.navigation-menu ul li ul li{
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }
