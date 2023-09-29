@@ -163,13 +163,17 @@ nav{
 .navigation-menu{
     height: 100%;
     width: 50%;
-    border:1px solid blue;
     position: relative;
+    padding-left: 50px !important;
 }
 .wishlist-and-cart{
     width: 30%;
     height: 100%;
-    border: 5px solid green;
+  
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 50px;
 }
 .category-list i{
     font-size: 15px;
@@ -204,36 +208,141 @@ nav{
 .category-list h1:hover + ul{
     display: block;
 }
-
-.navigation-menu ul:nth-child(1){
-    list-style: none;
-    height: 100%;
+.navigation-menu{
     display: flex;
     align-items: center;
     padding-left: 20px;
-    column-gap: 20px;
+    column-gap: 10px;
+
+}
+.navigation-menu span{
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
 }
 
-.navigation-menu ul li ul{
+.navigation-menu ul{
+    list-style: none;
+    position: absolute;   
+    width: 140px;
+    padding-top: 20px;
+    background-color: transparent;
+    display: none;
+}
+.navigation-menu ul li{
+    padding: 10px;
     background-color: #FFD333;
-    display: none !important;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    padding-left: 0px !important;
-    height: 120px !important;
-    
 }
-.navigation-menu ul li:hover ul{
-    display: block !important;
+.navigation-menu span:nth-child(4):hover ul{
+  display: block;
 }
-.navigation-menu ul li ul li{
-    height: 40px;
-    padding: 5px;
+
+.navigation-menu span:nth-child(4) ul li:hover{
+    background-color: white;
+    color: black;
+}
+
+.wishlist-and-cart span:nth-child(odd){
+    color: #FFD333;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.wishlist-and-cart span:nth-child(even){
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 5px;
+    margin-left: 10px;
+    color: white;
+}
+
+.banner-images{
+    width: 92.7%;
+    height: 400px;
+  
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.left-image{
+    height: 100%;
+    width: 60%;
+   
+    background-image: url("https://themewagon.github.io/multishop/img/carousel-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-div{
+    width: 60%;
+    min-height: 40%;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 20px;
+}
+.content-div button{
+    width: 100px;
+    height: 40px;
+    background: transparent;
+    border: 1.5px solid white;
+    margin-top: 20px;
+    color: white;
+   
+    font-size: 16px;
+}
+.content-div button:hover{
+    background-color: white;
+    color: black;
+}
+.right-images{
+    height: 100%;
+    width: 35%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-images div{
+    height: 45%;
+   
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-image img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s ease-in-out;
+}
+.top-image img:hover{
+    transform: scale(1.2) rotate(5deg);
+}
+.right-content-div{
+    position: absolute;
+    width: 60%;
+    height: 80% !important;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+}
+.right-content-div button{
+    width: 120px;
+    height: 40px;
+    background-color: #FFD333;
+    margin-top: 10px;
+    border: none;
 }
