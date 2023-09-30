@@ -346,3 +346,128 @@ nav{
     margin-top: 10px;
     border: none;
 }
+
+.content-div h1{
+    animation: text-translate-animation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+@keyframes text-translate-animation {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+      transform: translateY(0%);
+    }
+}
+.content-div button{
+    animation: button-translate-animation;
+    animation-duration: 1.3s;
+    animation-iteration-count: 1;
+}
+@keyframes button-translate-animation {
+    from{
+     transform: translateY(100%);
+    }
+    to{
+      transform: translateY(0);
+    }
+}
+.content-div p{
+  animation: p-scale-animation;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;  
+  animation-direction: reverse; 
+}
+
+@keyframes p-scale-animation {
+  from{
+    transform: scale(1);
+  } 
+  to{
+    transform: scale(1.2);
+  }  
+}
+.service{
+    height: 100px;
+   
+    margin-top: 50px;
+    width: 100%;
+   
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+}
+
+.service div{
+    width: 22%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.service div i{
+    color: #FFD333;
+    font-size: 50px;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service div span{
+    font-size: 22px;
+    font-weight: bold;
+}
+.category-heading{
+    padding: 0px 50px;
+    margin-top: 50px;
+}
+.category-heading span:nth-child(1){
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.category-items{
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.category-items div{
+   width: 22%;
+   height: 100px;
+   display: flex;
+   background-color: white;
+}
+.category-image{
+    width: 40% !important;
+    height: 100% !important;
+    overflow: hidden;
+}
+.category-info{
+    width: 60% !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding:10px;
+    row-gap: 10px;
+}
+.category-info span:nth-child(1){
+    font-size: 16px;
+    font-weight: 800;
+}
+.category-items div:hover .category-info{
+    background-color: #FFD333;
+}
+.category-image img{
+    transition: all 0.5s ease-in-out;
+}
+.category-items div:hover .category-image img{
+    transform: scale(1.2) rotate(3deg);
+}
