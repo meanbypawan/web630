@@ -471,3 +471,98 @@ nav{
 .category-items div:hover .category-image img{
     transform: scale(1.2) rotate(3deg);
 }
+.featured-products-container{
+    margin-top: 40px;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.featured-product:hover .image-container img{
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+.featured-product:hover .image-container .options{
+    display: flex;
+}
+.featured-product{
+   width: 22%;
+   height: 400px;
+   position: relative;
+}
+.image-container{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.options{
+    position: absolute;
+    width: 100%;
+    display: none;
+    justify-content: space-around;
+    padding: 0px 20px;
+}
+
+.options span{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.options span:hover{
+    background-color: #3D464D;
+    color: #FFD333;
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+.product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    row-gap: 5px;
+    background-color: white;
+}
+.product-info small{
+    color: #FFD333;
+}
+.product-info p, .product-info span{
+    font-size: 20px;
+    font-weight: 500;
+}
+.scroll-icon{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 60px;
+    background-color: #FFD333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scroll-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes scroll-animation {
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-100%);
+    }
+}
