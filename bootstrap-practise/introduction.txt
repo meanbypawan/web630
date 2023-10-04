@@ -1,0 +1,7 @@
+Bootstrap :-  It is CSS Framework
+
+Responsive:-
+  Xtra Large
+  Large
+  Medium Size 
+  Small 
