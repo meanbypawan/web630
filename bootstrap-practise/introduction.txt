@@ -5,3 +5,15 @@ Responsive:-
   Large
   Medium Size 
   Small 
+
+ Bootstrap Grid System:-
+
+  .container/.container-fluid
+    |---.row
+          |--col
+
+Screen Size / Break Point
+xl
+lg
+md
+          
