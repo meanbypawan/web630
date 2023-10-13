@@ -1,0 +1,15 @@
+<script>
+ var x=5,y;
+
+ y = ++x - x++ * ++x / x++;
+/*
+   x = 9
+   y = ++x - x++ * ++x / x++;
+         6 - 6   *   8 / 8 
+         6 - 48 /8
+         6 - 6
+           0
+*/
+ document.write("x : "+x);
+ document.write("<br>y  : "+y);
+</script>

@@ -1,0 +1,60 @@
+c/c++/java :- statically typed
+
+Variable concepts
+20, 'A', 20.5
+
+int x = 20;
+char x = 'A';
+float x = 20.5f;
+
+var x = 20;
+
+c :- C is procedure oriented programming/function oreinted programming language.
+     Procedure oriented is a paradigm
+
+c++/java/python :- These are the object oriented programming language.
+    OO is a paradigm      
+----------------------------------------------------------------------------
+Javascript :-
+
+  1. Javascript is client side as well as server side scripting language  
+  2. Javascript is dynamically typed programming language.
+  3. Javascript is simple.
+  4. Javascript function oriendted, object oriented multiparadigm scripting language.
+  5. Javascript is single threaded synchronous language.
+  6. Javascript has capability to convert html into the dhtml.
+
+  ECMA (European computer manufacturere association)
+  ES5, ES6,ES7.........ES12
+-------------------------------------------------------------------------------
+How to execute javascript client side / Browser
+
+p1.html
+---------------------------------------------
+<html>
+   <head>
+   
+   </head>
+
+   <body>
+     <script>
+       
+     </script>   
+   </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
