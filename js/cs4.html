@@ -1,0 +1,17 @@
+<script>
+    var c = prompt("Enter c marks")*1;
+    var cpp = prompt("Enter cpp marks")*1;
+    var java = prompt("Enter Java marks")*1;
+
+    var total = c+cpp+java;
+    var per = total/3;
+
+    if(per > 60)
+      document.write("Passed with 1st division..."+per);
+    else if(per >=50 && per<60)
+           document.write("Passed with 2nd division..."+per);
+         else if(per>=40 && per<50)
+                document.write("Passed with 3rd division..."+per);
+              else
+                document.write("You are failed..."+per);      
+</script>
