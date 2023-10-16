@@ -1,0 +1,17 @@
+<script>
+    var esum=0,osum=0;
+
+    var i=1;
+    while(i<=10){
+        if(i%2==0)
+          esum = esum + i;
+        else
+          osum = osum + i;
+        
+        document.write("<br> i : "+i);  
+        i++;
+    }
+
+    document.write("<br>Even Element Sum : "+esum);
+    document.write("<br>Odd Element Sum : "+osum);
+</script>
