@@ -1,0 +1,22 @@
+<script>
+    /*
+      Object :-
+
+      Customer of icici :-
+        properties :- name,mobile,address,ac.....
+        behaviours :- withdrawal(), deposite(), balanceEnquiry()
+    */
+
+    var customerList = [
+      {cname: 'A', mobile:9009111222, age: 25, address: 'Vijay nagar,Indore'},
+      {cname: 'B', mobile:9009111333, age: 26, address: '51,Indore'},
+      {cname: 'C', mobile:9009111444, age: 21, address: 'palasiya,Indore'}
+    ];
+
+    for(var obj of customerList){
+        document.writeln("Name : "+obj.cname);
+        document.writeln(" Mobile : "+obj.mobile);
+        document.writeln(" Age : "+obj.age);
+        document.writeln(" Address : "+obj.address+"<br>");
+    }
+</script>
