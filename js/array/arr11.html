@@ -1,0 +1,8 @@
+<script>
+    var customer = {id:100,cname:"ABC",age:25};
+
+    var copyOfCustomer = {...customer,mobile:9009111222};
+    
+    delete customer.id;
+    document.write(copyOfCustomer.id+"  "+copyOfCustomer.cname+"  "+copyOfCustomer.age+"  "+copyOfCustomer.mobile);
+</script>
