@@ -1,0 +1,20 @@
+<script>
+    // closure
+    //
+    function f1(a){
+        document.write("<br>Inside f1 : "+a);
+        return function f2(b){
+           document.write("<br>Inside f2 : "+b); 
+           return function f3(c){
+              document.write("<br>Inside f3 : "+c);
+           } 
+        }
+    }
+
+    f1(10)(20)(30); // Javasript currying
+    /*
+    var f2 = f1(10);
+    var f3 = f2(20);
+    f3(30);
+    */
+</script>
