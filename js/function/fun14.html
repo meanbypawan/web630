@@ -1,0 +1,15 @@
+<script>
+    // callback function : it is function which is passed as argument to another function
+    // 
+
+    function f1(a,b,c){
+       document.write("<br> a : "+a); // number
+       document.write("<br> b : "+b); // string
+       //document.write("<br> c : "+c); // function(){documet.write("callback executed...")}
+       c();
+    }
+
+    f1(20,"Hello",function(){
+        document.write("<br>Callback executed....");
+    });
+</script>

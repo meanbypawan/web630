@@ -1,0 +1,15 @@
+<script>
+    function f1(callback1, callback2,callback3){
+       callback1();
+       callback2();
+       callback3();
+    }
+
+    f1(()=>{
+        document.write("<br> Callback 1 is executed.....");
+    }, ()=>{
+        document.write("<br> Callback 2 is executed.....");
+    }, ()=>{
+        document.write("<br> Callback 3 is executed.....");
+    });
+</script>

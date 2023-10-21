@@ -1,0 +1,17 @@
+<script>
+    // I have to peform addition of 2 number
+    // then we have to check resultant value is even or odd by using callback
+
+    function addition(a,b,callback){
+        var result = a + b;
+        callback(result);
+    }
+
+    addition(20,11,function(n){
+        document.write("<br>Addition : "+n);
+        if(n%2==0)
+          document.write("<br>Result is even...");
+        else
+          document.write("<br>Result is odd....");  
+    });
+</script>

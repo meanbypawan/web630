@@ -1,0 +1,16 @@
+<script>
+    /*
+      clouser :- group of function budled together
+    
+    */
+
+    function outer(){
+        var x = 100;
+        return function inner(){
+            document.write(x);//
+        }
+    }
+
+   var inner =  outer();
+   inner();
+</script>

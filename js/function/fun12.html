@@ -1,0 +1,24 @@
+<script>
+    function Message(){
+      this.m1 = function(){
+        document.write("<br>m1-called...");
+      }
+      this.m2 = function(){
+        document.write("<br>m2-called...");
+      }
+      this.m3 = function(){
+        document.write("<br>m3-called...");
+        m4();
+      }
+
+      var m4 = function(){
+        document.write("<br>m4-called...");
+      }
+    }
+
+    var obj = new Message(); // obj : m1(), m2(), m3()
+    obj.m1();
+    obj.m2();
+    obj.m3();
+    //obj.m4();
+</script>

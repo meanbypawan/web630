@@ -1,0 +1,19 @@
+<script>
+    // this refere current Object
+    function outer(){
+        this.data = 100;
+
+        this.f1 = function(){
+            document.write("<br>Inside F1 : "+this.data);
+        }
+
+        this.f2 = function(){
+            document.write("<br>Inside F2 : "+this.data);
+        }
+    }
+
+    var obj = new outer();
+    obj.f1();
+    obj.f2();
+
+</script>
