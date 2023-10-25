@@ -1,0 +1,37 @@
+<script>
+    const firstTask = (n,callback)=>{
+        setTimeout(()=>{
+            console.log("Inside First : "+n);
+            callback(n+2);
+        },1000);
+    };
+
+    const secondTask = (n,callback)=>{
+        setTimeout(()=>{
+            console.log("Inside Second : "+n);
+            callback(n+2);
+        },1000);
+    };
+
+    const thirdTask = (n,callback)=>{
+        setTimeout(()=>{
+            console.log("Inside Third : "+n);
+            callback(n+2);
+        },1000);
+    };
+
+    const fourthTask = (n)=>{
+        setTimeout(()=>{
+            console.log("Inside Fourth : "+n);
+            console.log("All Task Done....");
+        },1000);
+    }; // All task are asynchronous in nature 
+
+    firstTask(10,(n)=>{
+        secondTask(n,(n)=>{
+            thirdTask(n,(n)=>{
+                fourthTask(n);
+            });
+        });
+    });
+</script>

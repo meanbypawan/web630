@@ -1,0 +1,33 @@
+<script>
+    /*
+      Code :-
+        a. Synchronous / Blocking Code
+        b. Asynchronous / Non-blocking Code
+    
+      task1(); ---- 1000 ms
+      task2(); ---- 1500ms
+      task3(); ----  500ms
+      -------------------------
+      setTimeout()
+      setInterval()
+    */
+
+    const m1 = ()=>{
+      console.log("m1-executed...");
+    }
+
+    const m2 = ()=>{
+        console.log("m2-executed...");
+    }
+    const interval = setInterval(()=>{
+        m2();
+    },2000);
+
+    setTimeout(function(){
+        m1();
+        clearInterval(interval);
+    },10000);
+
+    
+    
+</script>

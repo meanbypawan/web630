@@ -1,0 +1,31 @@
+<script>
+    console.log("At the start......");
+    const eatingPizza = (callback)=>{
+       setTimeout(()=>{
+         console.log("Pizza Done....");
+         callback();
+       },2000);
+    }
+
+    const meetingWithFirends = (callback)=>{
+        setTimeout(()=>{
+            console.log("Meeting Done....");
+            callback();
+          },5000);
+    }
+
+    const servicingCar = (callback)=>{
+        setTimeout(()=>{
+            console.log("Servicing Done....");
+            callback();
+          },3000);
+    }
+    eatingPizza(()=>{
+        meetingWithFirends(()=>{
+            servicingCar(()=>{
+                console.log("At the end...");
+            })
+        });
+    });
+    
+</script>
