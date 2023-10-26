@@ -1,0 +1,21 @@
+<script>
+    /*
+      Promise :-
+      a. fullfilled/resolve
+      b. rejected
+      c. pending
+      d. settled
+    */
+
+    var p = new Promise((resolve,reject)=>{
+        //resolve();
+        reject();
+    });
+
+    p.then(()=>{
+        document.write("Promise is resolved.....");
+    }).catch(()=>{
+        document.write("Promise is rejected.....");
+    });
+
+</script>

@@ -1,0 +1,12 @@
+<script>
+  var p = new Promise((resolve,reject)=>{
+     //resolve("Promise is resolved");
+     reject("Promise is rejected....");
+  });
+
+  p.then((resolvedResult)=>{
+     document.write(resolvedResult);
+  }).catch((rejectedResult)=>{
+    document.write(rejectedResult);
+  });
+</script>
