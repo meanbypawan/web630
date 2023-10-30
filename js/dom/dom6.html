@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+        <p>
+            <input id="first" type="text" placeholder="Enter first value"/>
+            <input id= "second" type="text" placeholder="Enter second value"/>
+        </p>
+        <p>
+            <button onclick="operation('+')">ADD</button>
+            <button onclick="operation('-')">SUB</button>
+            <button onclick="operation('*')">MULT</button>
+            <button onclick="operation('/')">DIV</button>
+        </p>
+        <p id="result"></p>
+        <script>
+            function operation(operator){
+               var firstValue = document.getElementById("first").value;
+               var secondValue = document.getElementById("second").value;
+               var result = document.getElementById("result");
+               
+               firstValue = firstValue*1;
+               secondValue = secondValue*1;
+               if(firstValue && secondValue && typeof(firstValue)=="number" && typeof(secondValue)=="number"){
+                  if(operator == '+')
+                     result.innerHTML = "Result : "+(firstValue+secondValue);
+                  else if(operator == '-')
+                     result.innerHTML = "Result : "+(firstValue-secondValue);    
+                  else if(operator == '*')
+                     result.innerHTML = "Result : "+(firstValue*secondValue);
+                  else if(operator=='/')
+                  result.innerHTML = "Result : "+(firstValue/secondValue);
+               }
+               else
+                 window.alert("Invalid input...");
+            }
+        </script>
+    </body>
+</html>
