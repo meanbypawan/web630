@@ -28,15 +28,103 @@
             <small id="passwordError"></small>
         </div>
         <div class="form-group">
+            <label>Email Id</label>
+            <input onkeyup="validateEmail()" id="email" type="email" class="form-control"/>
+            <small id="emailError"></small>
+        </div>
+        <div class="form-group">
             <label>Contact number</label>
             <input onkeyup="validateMobile()" type="text" class="form-control" id="mobile"/>
             <small id="mobileError"></small>
+        </div>
+        <div class="form-group">
+            <select onchange="validateQualification()" id="qualification" class="form-control">
+                <option value="0">select qualification</option>
+                <option value="DR">Doctorate</option>
+                <option value="PG">Post graduate</option>
+                <option value="GR">Graduate</option>
+                <option value="UG">Under graduate</option>
+                <option value="DIP">Diploma</option>
+            </select>
+            <small id="qualificationError"></small>
+        </div>
+        <div class="form-group">
+            <label>Gender : </label>
+            Male <input type="radio" onchange="validateGender()" id="rdMale" value="M" name="gender"/>
+            Female <input type="radio" onchange="validateGender()" id="rdFemale" value="F" name="gender"/>
+            <br>
+            <small id="genderError"></small>
+        </div>
+        <div class="form-group">
+            <label>Upload Resume</label>
+            <input onchange="validateFile()" id="file" type="file"/><br>
+            <small id="fileError"></small>
         </div>
         <div class="form-group">
             <button onclick="return validateForm()" type="submit" class="btn btn-warning">Sign up</button>
         </div>
     </form>
     <script>
+        function validateEmail(){
+            var status = true;
+            var email = document.getElementById("email").value;
+            var emailError = document.getElementById("emailError");
+            var regExForEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(regExForEmail.test(email)==false){
+             status = false;
+             emailError.innerHTML = "Invalid email id";
+            } 
+            else
+             emailError.innerHTML = "";
+            return status;
+        }
+        function validateFile(){
+             var status = true;
+             var fileObject = document.getElementById("file");
+             var fileError = document.getElementById("fileError");
+             if(fileObject.files[0]){ 
+             var fileName = fileObject.files[0].name;
+             var dotIndex = fileName.lastIndexOf(".");
+             var fileExtension = fileName.substring(dotIndex);
+            
+             if(fileExtension != '.pdf'){
+               status = false;
+               fileError.innerHTML = "Only pdf is allowed";
+             }
+             else
+              fileError.innerHTML = "";
+            }
+            else{
+                status = false;
+                fileError.innerHTML = "Please upload your resume";
+            }
+             return status;
+        }
+        function validateGender(){
+            var status = true;
+            var male = document.getElementById("rdMale").checked;
+            var female = document.getElementById("rdFemale").checked;
+            var genderError = document.getElementById("genderError");
+            if(male == false && female == false){
+                status = false;
+                genderError.innerHTML = "please select gender";
+            }
+            else
+             genderError.innerHTML = "";
+            return status;
+        }
+        function validateQualification(){
+            var status = true;
+            var qualification = document.getElementById("qualification").value;
+            var qualificationError = document.getElementById("qualificationError");
+            if(qualification == "0"){
+                status = false;
+                qualificationError.innerHTML = "Please select your qualification";
+            }
+            else
+              qualificationError.innerHTML  = "";
+            return status;
+        }
         function validateMobile(){
             var status = true;
             var mobile = document.getElementById("mobile").value;
@@ -101,8 +189,12 @@
         function validateForm(){
            var usernameStatus = validateUsername();
            var passwordStatus = validatePassword();
+           var emailStatus = validateEmail();
            var mobileStatus = validateMobile();
-           if(usernameStatus && passwordStatus && mobileStatus)
+           var qualificationStatus = validateQualification();
+           var genderStatus  = validateGender();
+           var fileStatus = validateFile();
+           if(usernameStatus && passwordStatus && emailStatus && mobileStatus && qualificationStatus && genderStatus && fileStatus)
              return true;
            return false;  
         }
