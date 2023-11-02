@@ -1,0 +1,53 @@
+<script>
+    const firstTask  = ()=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("First Task Completed...");
+            },2000);
+        });
+    }
+
+    const secondTask = () =>{
+        return new Promise((resolve,reject)=>{
+           setTimeout(()=>{
+              resolve("Second Task Completed....");
+           },3000);
+        });
+    }
+
+    const thirdTask = ()=>{
+       return new Promise((resolve,reject)=>{
+          setTimeout(()=>{
+            resolve("Third Task Completed....");
+          },2500);
+       }); 
+    }
+
+    /*
+    firstTask().then(result=>{
+        console.log(result);
+        secondTask().then(result=>{
+            console.log(result);
+            thirdTask().then(result=>{
+                console.log(result);
+            });
+        });
+    });
+    */
+    const executeTask = async()=>{
+     try{   
+       let firstTaskResult =  await firstTask();
+       let secondTaskResult =  await secondTask();
+       let thirdTaskResult =  await thirdTask();
+    
+       console.log(firstTaskResult);
+       console.log(secondTaskResult);
+       console.log(thirdTaskResult);
+     }
+     catch(err){
+        console.log(err);
+     } 
+    }
+
+    executeTask();
+</script>
