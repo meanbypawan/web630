@@ -1,0 +1,84 @@
+<script>
+    /*
+       Javascript :-
+          JS is object-oriented, function oriented multiparadigm scripting language.
+          paradigm :- style of programming
+       
+       Object oriented(c++,java,python.....) :-
+           Object which you want to manipulate first thing about that then identify
+           the properties of the object then identify the behaviours of the object
+           then finall creat a factory to represent/form the object
+
+       Object:-
+         
+         car
+          properties:- (stearing, tyres, engine)
+          behavoiurs:- (start(), stop(), hb()) 
+
+        class TATA{
+           stearing;
+           tyres;
+           engine;
+           
+           start(){
+             ---
+             ---
+           }
+           stop(){
+            --
+            --
+           }
+           hb(){
+            --
+            --
+           }
+        }  
+        let safari = new TATA(); // safari is object of TATA class/Factor
+
+        Class :-
+          Once we define a class then we can create n-number of object.
+          Class is the collection of similar type of object
+          Class is user define tpe  
+          
+          
+        obj:--m1()
+        
+        function Message(){
+            this.m1 = function(){
+                console.log("m1-executed....");
+            }
+        }
+        let obj = new Message();
+        obj.m1();
+
+        let obj = {m1:function(){console.log('m1-executed...')}};
+        obj.m1();
+
+        class Message{
+            m1(){
+                console.log("m1-executed...");
+            }
+        }
+
+        let obj = new Message();
+        obj.m1();
+    */
+
+    // obj :- m1(), m2(), m3()
+    class Message{
+        m1(){
+            console.log("GM.....");
+        }
+        m2(){
+            console.log("GE......");
+        }
+        m3(){
+            console.log("GN......");
+        }
+    }
+
+    let obj = new Message(); // obj : m1(),m2(),m3()
+    obj.m1();
+    obj.m2();
+    obj.m3();
+</script>
