@@ -6,10 +6,41 @@
     // Addition :  
     // properies : a,b
     // behavoiur : add()
-               
-   class Additition{
+   /*
+     Constructor :- It is special member of class
+     To initialize the object at the time of object creation
+     Constructor called automatically when object is created.
 
+     c++/Java :- Overloading
+       constructor overloading
+       Method overloading
+   */            
+   class Addition{
+     constructor(a,b){
+        this.a = a;
+        this.b = b;
+     }
+     add(){
+        console.log("Addition : "+(this.a + this.b));
+     }
+     sub(){
+      console.log("Subtraction : "+(this.a - this.b));
+     }
+     multiplication(){
+       console.log("Multiplication : "+(this.a * this.b));
+     }
+     division(){
+      console.log("Division : "+(this.a / this.b));
+     }
+     display(){
+        console.log("a : "+this.a+" b : "+this.b);
+     }
    }
    
-   let obj = new Addition();
+   let obj = new Addition(50,40); // obj : a=50,b=40
+   obj.add();
+   obj.sub();
+   obj.multiplication();
+   obj.division();
+   obj.display();
 </script>

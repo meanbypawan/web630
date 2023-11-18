@@ -1,0 +1,22 @@
+<script>
+    class A{
+        constructor(){
+            console.log("A-constructor called...");
+        }
+        m1(){
+            console.log("A-m1....");
+        }
+    }
+    class B extends A{
+        constructor(){
+            console.log("B-constructor called...");
+            super();
+        }
+        m1(){
+            console.log("B-m1.....");
+            super.m1();
+        }
+    }
+
+    new B().m1();
+</script>

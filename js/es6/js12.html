@@ -1,0 +1,38 @@
+<script>
+/*
+  Inheritance :-
+    By using existing thing, To develop something new but there should not be any changes in
+    existing thing.
+
+    or
+
+    When object of a one class aquire the properties of another object is called inheritance.
+
+   J5 (10,000)
+    |-- recevingCall()
+    |---rejectingCall()
+   -----------------------
+   J7 (25000)
+    |--recevingCall()
+    |--rejectingCall()
+    |--camera() 
+ */
+ class J5{
+    recevingCall(){
+        console.log("Call Received...");
+    }
+    rejectingCall(){
+        console.log("Call rejected...");
+    }
+ }
+ class J7 extends J5{
+    camera(){
+        console.log("Photo Clicked...");
+    }
+ }
+ 
+let j7 = new J7();
+j7.recevingCall();
+j7.rejectingCall();
+j7.camera();
+</script>

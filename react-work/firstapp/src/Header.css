@@ -1,0 +1,8 @@
+.menu-link{
+  color: mediumaquamarine;
+}
+
+.active{
+    color:black;
+    text-decoration: underline;
+}

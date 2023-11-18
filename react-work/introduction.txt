@@ -1,0 +1,118 @@
+Reactjs :-
+ 
+ 1. It is javascript librarary or tool to develop Single Page Application
+ 2. It make use of Virtula Dom instead of actual Dom
+ 3. Virtual DOM is a copy of acutal
+ 4. Singlae Page Application use componenent based architectufa-rotate-180
+      HeaderComponent.js
+      NavigationComponent.js
+      MainContentComponent.js
+      FooterComponent.js 
+ 5.  Component :- It is Part of UI
+       HTML + CSS + JS = Component
+ 
+ 6.  Component :- 16.8
+       a. stateless component / Functional Component
+       b. statefull component / Class Component
+
+     16.8>=
+      HOOKS
+      Functional Component + Hooks = statefull component
+
+ 7. How to create react application
+     SPA, Virtual DOM, Component
+
+    Module:-    
+---------------------------------------------------------------------------
+SPA :-
+  ReactJs
+   It is Javascript Library
+   It use virtual DOM 
+   Javascript | Typescript
+  -----------------------------
+  Angular:-
+   It is Framework
+   It is actual DOM
+   Primary language is Typescript (ES5 + ES6 = TS)
+------------------------------------------------------------------------------
+ NodeJS :- It is javascript runtime envoirnment.
+
+   Ex :- Chakra
+   ME :- Chakra core
+   MF :- Spider Monke ------> Javascript Engine
+   GC :- V8 engine
+
+   c++(v8-engine) ===> NodeJs
+  
+  npm :- Node Package Manager
+
+  Library/Dependency/Module
+   events
+   https
+   url
+   fs
+   path
+   -----
+   ----- 
+   Dependency
+     a. Application Level Dependency
+          aa. Installable
+              mysql, express, jsonwebtoken.......
+              npm install mysql
+              npm install express
+
+          bb. Default
+               http, events, fs, url, path.....
+
+     b. Global Level / Envrionment Level
+          nodemon
+          @angular/cli
+          express-generator
+
+          npm install -g nodemon
+---------------------------------------
+Module :- It is javascript file
+          data, function, class......
+-------------------------------------------
+nodeapp (Machine - A)
+ npm install mysql
+ npm install express
+
+ node_modules :- it contains source code of installed depencies/module
+ package.json :- Keep the entries of all dependecies
+
+
+nodeapp(Machine - B)
+  app.js
+  package.json
+ 
+Module :-
+  export
+  import
+
+  default import & export
+  named import & export
+
+  importing module
+   import
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

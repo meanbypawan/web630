@@ -1,0 +1,30 @@
+<script>
+    /*
+      m1(),m2() both are the member of Message class
+
+      Member
+        a. Instance member (Belongs to object/Personal properties of object)
+        b. Static member (Belongs to class)
+    */
+    class Message{
+        m1(){
+            console.log("M1-called....");
+        }
+        m2(){
+            console.log("M2-called....");
+        }
+        static wish(){
+            console.log("GM Friends....");
+        }
+        static m3(){
+            console.log("M3 executed....");
+        }
+    }
+
+    let obj = new Message();
+    obj.m1();
+    obj.m2();
+    Message.wish();
+    Message.m3();
+    
+</script>
