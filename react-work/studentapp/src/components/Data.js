@@ -28,5 +28,11 @@ export default [
         name: "NOP",
         branch: "IT",
         mobile: 9009111666
+    },
+    {
+        roll: 1006,
+        name: "QRS",
+        branch: "MECH",
+        mobile: 9009111777
     }
 ];
