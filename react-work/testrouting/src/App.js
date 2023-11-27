@@ -8,6 +8,8 @@ import Portfolio from './components/Portfolio';
 import Gallery from './components/Gallery';
 import SignIn from './components/Signin';
 import SignUp from './components/Signup';
+import UseEffect from './components/UseEffect';
+import ProductList from './components/ProductList';
 
 function App() {
   return <>
@@ -19,6 +21,8 @@ function App() {
       <Route path='/gallery' element={<Gallery/>}/>
       <Route path='/signin' element={<SignIn/>}/>
       <Route path='/signup' element={<SignUp/>}/>
+      <Route path='useEffect' element={<UseEffect/>}/>
+      <Route path='/product-list' element={<ProductList/>}/>
     </Routes>
   </>
 }

@@ -10,6 +10,8 @@ export default function Header(){
         <Link to="/gallery"><span>Gallery</span></Link>
         <Link to="/signin"><span>Sign in</span></Link>
         <Link to="/signup"><span>Sign up</span></Link>
+        <Link to="/useEffect"><span>UserEffect</span></Link>
+        <Link to="/product-list"><span>Product List</span></Link>
       </header>
     </>
 }
