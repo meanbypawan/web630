@@ -47,7 +47,7 @@ export const Header = ()=>{
               <div className="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul className="navbar-nav  ">
                   <li className="nav-item active">
-                    <Link className="nav-link" to="">Add Receptionist <span className="sr-only">(current)</span></Link>
+                    <Link className="nav-link" to="/add-reception">Add Receptionist <span className="sr-only">(current)</span></Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/reception-list"> Reception List</Link>

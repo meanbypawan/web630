@@ -12,6 +12,11 @@ export const ReceptionList = ()=>{
       if(action.type=="set-reception-list"){
         return {...state,receptionList:action.payload}
       }
+      else if(action.type=="delete-reception"){
+        let index = state.receptionList.findIndex((obj)=>obj.id == action.payload);
+        state.receptionList.splice(index,1);
+        return {...state};
+      }
     }
     const [data,dispatch] = useReducer(reducer,inititalState);
     useEffect(()=>{
@@ -33,6 +38,21 @@ export const ReceptionList = ()=>{
        catch(err){
         console.log(err);
        } 
+    }
+    const deleteReception = async (receptionId)=>{
+        console.log(receptionId);
+        let token = sessionStorage.getItem("token"); 
+        console.log(token);
+        if(window.confirm("Are you sure ?")){
+        let response = await axios.put(apis.deleteReception+receptionId,null,{
+            headers: { Authorization: `Bearer ${token}`}
+        });
+        console.log(response.data);
+        if(response.data.status){
+           dispatch({type: 'delete-reception',payload:receptionId});
+        }
+    }
+       
     }
     return <>
        <div className="hero_area">
@@ -61,7 +81,7 @@ export const ReceptionList = ()=>{
                 <td>{receptionObj.raddress}</td>
                 <td>Doctor</td>
                 <td colSpan="2">
-                    <button className="btn btn-danger">Delete</button>
+                    <button onClick={()=>deleteReception(receptionObj.id)} className="btn btn-danger">Delete</button>
                     <button className="btn btn-info ml-2">Edit</button>
                 </td>
                 

@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { DashBoard } from "./components/dashboard/DashBoard";
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 import { ReceptionList } from "./components/dashboard/ReceptionList";
+import { AddReception } from "./components/dashboard/AddReception";
 function App() {
   return <>
   <Routes>
@@ -23,6 +24,7 @@ function App() {
     <Route path="/signup" element={<Signup/>}/>
     <Route path="/dashboard" element={<ProtectedRoute><DashBoard/></ProtectedRoute>}/>
     <Route path="/reception-list" element={<ProtectedRoute><ReceptionList/></ProtectedRoute>}/>
+    <Route path="/add-reception" element={<ProtectedRoute><AddReception/></ProtectedRoute>}/> 
   </Routes>
   </>
 }
