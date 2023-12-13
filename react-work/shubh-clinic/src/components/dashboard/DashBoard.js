@@ -1,7 +1,9 @@
+import { useSelector } from "react-redux"
 import { Header } from "../header/Header"
 
 export const DashBoard = ()=>{
-    let currentUser = JSON.parse(sessionStorage.getItem("current-user"));
+    //let currentUser = JSON.parse(sessionStorage.getItem("current-user"));
+    const {currentUser} = useSelector((state)=>state.user);
     return <>
       <div className="hero_area">
         <Header/>

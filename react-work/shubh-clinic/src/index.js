@@ -4,11 +4,27 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider, useSelector } from 'react-redux';
+import store from './components/redux-config/Store';
+import axios from 'axios';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+axios.interceptors.request.use((config)=>{
+  console.log("Interceptor called...........");
+  let token = sessionStorage.getItem("token");
+  if(token)
+    config.headers.Authorization = `Bearer `+token;
+  return config;
+});
+// axios.interceptors.response.use(()=>{
+//    // do after getting response....
+// });
 root.render(
   <BrowserRouter>
+   <Provider store={store}>
     <App />
+   </Provider> 
   </BrowserRouter>
 );
 

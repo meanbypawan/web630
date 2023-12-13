@@ -11,8 +11,16 @@ import { DashBoard } from "./components/dashboard/DashBoard";
 import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 import { ReceptionList } from "./components/dashboard/ReceptionList";
 import { AddReception } from "./components/dashboard/AddReception";
+import axios from "axios";
+import apis from './components/apis/ApiEndPoints';
+import { useDispatch, useSelector } from "react-redux";
+import { fetchReception, setReceptionList } from "./components/redux-config/ReceptionSlice";
+import { ToastContainer, toast } from "react-toastify";
+import { useEffect } from "react";
 function App() {
+  
   return <>
+  <ToastContainer/>
   <Routes>
     <Route path="/" element={<Home/>}/>
    

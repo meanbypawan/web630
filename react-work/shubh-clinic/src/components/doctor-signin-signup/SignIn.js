@@ -8,10 +8,14 @@ import axios from "axios";
 import apis from '../apis/ApiEndPoints';
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCurrentUser } from "../redux-config/UserSlice";
+import { fetchReception } from "../redux-config/ReceptionSlice";
 export const SignIn = ()=>{
     const [email,setEmail] = useState();
     const [password,setPassword] = useState();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const signIn = async (event)=>{
       try{
         event.preventDefault();
@@ -21,7 +25,10 @@ export const SignIn = ()=>{
           let currentUserData = response.data.data;
           delete currentUserData.password;
           console.log(currentUserData);
-          sessionStorage.setItem("current-user",JSON.stringify(currentUserData));
+          // sessionStorage.setItem("current-user",JSON.stringify(currentUserData));
+          // sessionStorage.setItem("token",response.data.msg);
+          dispatch(setCurrentUser({currentUser: currentUserData,token:response.data.msg}));
+          dispatch(fetchReception(response.data.msg));
           sessionStorage.setItem("token",response.data.msg);
           navigate("/dashboard");
         }
@@ -29,6 +36,7 @@ export const SignIn = ()=>{
           toast.error("Invalid user");
       }
       catch(err){
+        console.log(err);
         toast.error("Oops! something went wrong");
       }
     }

@@ -1,7 +1,9 @@
 import { Link, useNavigate } from "react-router-dom"
 import { isLoggedIn } from "../auth/Auth"
+import { useSelector } from "react-redux";
 
 export const Header = ()=>{
+    const {isUserLoggedIn} = useSelector((state)=>state.user);
     const navigate = useNavigate();
     const signout = ()=>{
       sessionStorage.clear(); 
@@ -43,7 +45,7 @@ export const Header = ()=>{
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className=""> </span>
             </button>
-            {isLoggedIn() ? <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            {isUserLoggedIn ? <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <div className="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul className="navbar-nav  ">
                   <li className="nav-item active">

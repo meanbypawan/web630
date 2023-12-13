@@ -1,3 +1,7 @@
+import { useSelector } from "react-redux";
+
+
 export const isLoggedIn = ()=>{
-    return !!sessionStorage.getItem("current-user"); // {}
+    // const {isUserLoggedIn} = useSelector((state)=>state.user);
+    // return isUserLoggedIn // {}
 }

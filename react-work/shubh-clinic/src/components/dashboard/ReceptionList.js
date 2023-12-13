@@ -3,42 +3,27 @@ import { Header } from "../header/Header"
 import axios from "axios";
 import apis from "../apis/ApiEndPoints";
 import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteRecord, setReceptionList } from "../redux-config/ReceptionSlice";
 
 export const ReceptionList = ()=>{
-    const inititalState = {
-        receptionList: null
-    }    
-    const reducer = (state,action)=>{
-      if(action.type=="set-reception-list"){
-        return {...state,receptionList:action.payload}
-      }
-      else if(action.type=="delete-reception"){
-        let index = state.receptionList.findIndex((obj)=>obj.id == action.payload);
-        state.receptionList.splice(index,1);
-        return {...state};
-      }
-    }
-    const [data,dispatch] = useReducer(reducer,inititalState);
-    useEffect(()=>{
-        loadReceptionList();
-    },[]);
-
-    const loadReceptionList = async ()=>{
-       try{ 
-        let token = sessionStorage.getItem("token");
-        let response = await axios.get(apis.receptionList,{
-            headers: { Authorization: `Bearer ${token}` }
-        });
-        if(response.data.status){
-          dispatch({type:"set-reception-list",payload:response.data.data});
-        }
-        else
-          toast.error("Oops! something went wrong...");
-       }
-       catch(err){
-        console.log(err);
-       } 
-    }
+    // const inititalState = {
+    //     receptionList: null
+    // }    
+    // const reducer = (state,action)=>{
+    //   if(action.type=="set-reception-list"){
+    //     return {...state,receptionList:action.payload}
+    //   }
+    //   else if(action.type=="delete-reception"){
+        // let index = state.receptionList.findIndex((obj)=>obj.id == action.payload);
+        // state.receptionList.splice(index,1);
+        // return {...state};
+    //   }
+    // }
+    //const [data,dispatch] = useReducer(reducer,inititalState);
+    const { receptionList,isLoading,isError } = useSelector((state)=>state.reception);
+    const dispatch = useDispatch();
+    
     const deleteReception = async (receptionId)=>{
         console.log(receptionId);
         let token = sessionStorage.getItem("token"); 
@@ -49,7 +34,7 @@ export const ReceptionList = ()=>{
         });
         console.log(response.data);
         if(response.data.status){
-           dispatch({type: 'delete-reception',payload:receptionId});
+           dispatch(deleteRecord(receptionId));
         }
     }
        
@@ -58,7 +43,7 @@ export const ReceptionList = ()=>{
        <div className="hero_area">
         <Header/>
        </div>
-       <table className="table">
+       {isLoading ? <h1>Data is Loading</h1> :  <table className="table">
         <thead>
             <tr>
                 <th>Sr.no</th>
@@ -72,7 +57,7 @@ export const ReceptionList = ()=>{
             </tr>
         </thead>
         <tbody>
-            {data.receptionList?.map((receptionObj,index)=><tr key={index}>
+            {receptionList?.map((receptionObj,index)=><tr key={index}>
                 <td>{index+1}</td>
                 <td>{receptionObj.id}</td>
                 <td>{receptionObj.name}</td>
@@ -87,6 +72,7 @@ export const ReceptionList = ()=>{
                 
             </tr>)}
         </tbody>
-       </table>
+       </table>}
+      
     </>
 }
